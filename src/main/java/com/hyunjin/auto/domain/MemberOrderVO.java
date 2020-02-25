@@ -1,15 +1,16 @@
 package com.hyunjin.auto.domain;
 
-public class OrderListVO {
+public class MemberOrderVO {
 	/* *
-	 * idx=인덱스
 	 * no=학번
-	 * todayDate=순서정한 날짜
-	 * order=그날의 순서
+	 * name=이름
+	 * address=github주소
 	 * */
 	
 	private int idx;
 	private int no;
+	private String name;
+	private String address; 
 	private String todayDate;
 	private int orderNo;
 	
@@ -25,6 +26,18 @@ public class OrderListVO {
 	public void setNo(int no) {
 		this.no = no;
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
 	public String getTodayDate() {
 		return todayDate;
 	}
@@ -37,7 +50,4 @@ public class OrderListVO {
 	public void setOrderNo(int orderNo) {
 		this.orderNo = orderNo;
 	}
-	
-	
-
 }

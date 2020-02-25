@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hyunjin.mapper.orderMapper">
+
+	<select id="selectOrder" resultType="com.hyunjin.auto.domain.OrderListVO">
+		select * from autoOrder.orderList order by todayDate desc,no;
+	</select>
+	<select id="selectMember" resultType="com.hyunjin.auto.domain.MemberVO">
+		select * from autoOrder.member order by no
+	</select>
+	<select id="countMember" resultType="java.lang.Integer">
+		select count(*) from autoOrder.member
+	</select>
+	
+	<insert id="insertOrder">
+		insert into autoOrder.orderList(no,todayDate,orderNo) values(#{no},#{todayDate},#{orderNo})
+	</insert>
+	
+	<select id="selectCurOrder" resultType="com.hyunjin.auto.domain.OrderListVO">
+		select * from autoOrder.orderList where todayDate=#{today} order by orderNo
+	</select>
+	
+	<select id="selectSum" resultType="com.hyunjin.auto.domain.MemberOrderVO">
+		select name,no,sum(orderNo) as orderNo from autoOrder.orderList natural join autoOrder.member group by no order by no
+	</select>
+</mapper>

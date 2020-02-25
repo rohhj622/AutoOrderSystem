@@ -4,6 +4,7 @@
 <%@ page session="false" %>
 <html>
 <head>
+
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -19,38 +20,63 @@
 			text-align: center;
 
 		}		
-		a:link { color: black; text-decoration: none;text-align: center;}
-		a:visited { color: black; text-decoration: none;text-align: center;}
-		a:hover { color: #595959; text-decoration: none;text-align: center;}	
+
+		.myButton {
+			background-color:#7892c2;
+			border-radius:31px;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-family:Arial;
+			font-size:21px;
+			padding:21px 51px;
+			text-decoration:none;
+			text-shadow:1px 2px 0px #283966;
+		}
+		.myButton:hover {
+			background-color:#476e9e;
+		}
+		.myButton:active {
+			position:relative;
+			top:1px;
+		}	
+		
+		a:link { color: black; text-decoration: none;text-align: center;} 
+		a:visited { color: #ffffff; text-decoration: none;text-align: center;}
+		a:hover { color: #ffffff; text-decoration: none;text-align: center;}
 		
 	</style>
+	
     
 	<title>Home</title>
 	
 </head>
 <body>
+
+
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     
     <div class="container">
     	<div class="row">
     		<div class="col-lg-12">
-    			<h2>auto order</h2>
+    			<a href="<c:url value='/'/>">
+    				<h1>autoOrder</h1>
+    			</a>
     		</div>
     	</div>
+    	<br>
     	<div class="row">
-    		<div class="col-lg-12">
-    			<a href="<c:url value='/addStudentPage'/>">
-    				학생추가하기
-    			</a>	
-    		</div>
+    		<a href="<c:url value='/addStudentPage'/>" class="myButton">
+    			학생 추가하기
+    		</a>
+    	</div>
+    	<br><br>
+    	<div class="row">
+    		<a href="<c:url value='/ordering'/>" class="myButton">!!오늘의 순서!!</a>
     	</div>
     </div>
     
-	<h1>
-		Hello world!  
-	</h1>
-
-	<P>The time on the server is ${serverTime}. </P>
 </body>
 </html>

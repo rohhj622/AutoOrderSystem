@@ -13,9 +13,9 @@
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://localhost:3306/SpringTest?useSSL=false&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/autoOrder?useSSL=false&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true"></property>
 		<property name="username" value="HJ"></property>
-		<property name="password" value="990622"></property>
+		<property name="password" value="shguswls12"></property>
 	</bean>
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
