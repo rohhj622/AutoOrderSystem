@@ -43,7 +43,7 @@
   
 ### MemberOrderVO
 - '학번'을 이용하여 join한 정보를 담을 VO
-  + idx,no,name,todayDate,orderNO,address
+  + idx,no,name,todayDate,orderNo,address
   
 
   
